@@ -22,6 +22,10 @@ This is the sample Selenium Java TestNg Maven framework which consist of the sam
 # Page Object Details
 <ol>
   <li><b>src/test/java/Amazon : </b> This folder consists of the application specific reusable methods and tests.</li>
+  <li><b>src/test/java/Amazon/ElementFactory : </b>Locators of the specific modules. <b>CR fix can be done it here alone if any change happens in locator</b></li>
+  <li><b>src/test/java/Amazon/PageObjects : </b>Reusable methods in specific classes.</li>
+  <li><b>src/test/java/Amazon/Pages : </b>Parent object which is used to access the reusable methods.</li>
+  <li><b>src/test/java/Amazon/Tests : </b> Actual tests.</li>
   <li><b>src/test/java/genericLibrary : </b>This folder consists of the non-application specific libraries. For e.g.: Browser launch, Reporting</li>
 </ol>
 
