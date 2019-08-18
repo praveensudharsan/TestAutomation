@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Test Automation API Tests]" parallel="tests">
+  <listeners>
+    <listener class-name="org.testng.reporters.EmailableReporter2"/>
+  </listeners>
+  <test thread-count="3" name="RestAssured API Tests(failed)" parallel="tests">
+    <classes>
+      <class name="API.Tests.APITests">
+        <methods>
+          <include name="createUser"/>
+        </methods>
+      </class> <!-- API.Tests.APITests -->
+    </classes>
+  </test> <!-- RestAssured API Tests(failed) -->
+</suite> <!-- Failed suite [Test Automation API Tests] -->

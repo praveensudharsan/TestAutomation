@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Test Automation Tests]" parallel="tests">
+  <parameter name="appUrl" value="https://www.amazon.com"/>
+  <parameter name="driverType" value="chrome"/>
+  <listeners>
+    <listener class-name="org.testng.reporters.EmailableReporter2"/>
+  </listeners>
+  <test thread-count="3" name="Amazon-Tests(failed)" parallel="tests">
+    <classes>
+      <class name="Amazon.Tests.AmazonTests">
+        <methods>
+          <include name="afterTest"/>
+          <include name="BookSearch"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- Amazon.Tests.AmazonTests -->
+    </classes>
+  </test> <!-- Amazon-Tests(failed) -->
+</suite> <!-- Failed suite [Test Automation Tests] -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Automation Tests" parallel="tests" thread-count="3" preserve-order="true">
+
+	<parameter name="appUrl" value="https://www.amazon.com" />
+	
+	<!-- TestNg Listener for Report Generation -->
+	<listeners>
+		<listener class-name="org.testng.reporters.EmailableReporter2" />
+	</listeners>
+	
+	<!-- Test -->
+
+	<test name="Amazon-Tests:Chrome" enabled="true">
+	<parameter name="driverType" value="chrome" />
+		<classes>
+			<class name="Amazon.Tests.AmazonTests" />
+		</classes>
+	</test>	
+	
+	<test name="Amazon-Tests:Firefox" enabled="true">
+	<parameter name="driverType" value="firefox" />
+		<classes>
+			<class name="Amazon.Tests.AmazonTests" />
+		</classes>
+	</test>	
+		
+</suite>
