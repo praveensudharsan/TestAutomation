@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Automation Tests" parallel="tests" thread-count="3" preserve-order="true">
+
+	<parameter name="baseURL" value= "https://gorest.co.in" />
+	<parameter name="accessToken" value= "L41uyhzxoig9roHjTyRHFvBT48K2GjCMjbVC" />
+	<parameter name="contentType" value= "application/json" />
+	<parameter name="driverType" value = "APITests" />
+	
+	<!-- TestNg Listener for Report Generation -->
+	<listeners>
+		<listener
+			class-name="org.testng.reporters.EmailableReporter2" />
+	</listeners>
+
+	<!-- Test -->
+
+	<test name="API-Tests" enabled="true">
+		<classes>
+			<class name="API.Tests.APITests" />
+		</classes>
+	</test>
+
+</suite>

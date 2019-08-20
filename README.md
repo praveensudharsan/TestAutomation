@@ -1,12 +1,13 @@
 # TestAutomation Framework
 
-This is the sample Selenium Java TestNg Maven framework which consist of the sample test for Amazon and page objects for the tests.<br>
+This is the sample Selenium Java TestNg Maven framework which consist of the sample ui test (for Amazon) and API tests (using RestAssured)  and page objects for the tests.<br>
 <b>Key points:</b><br>
 <ol>
   <li>Selected TestNg framework for parallel execution and test handling. [Groups, Annotations, Parallel Execution]</li>
+  <li>Project is integrated with RestAssured.</li>
   <li>Integrated with Extent report for reporting. In addition to default testng report, project is integrated with extent report for better reporting.</li>
   <li>Project can be integrated with any CI tool using the surfire plugin configured in POM</li>
-  <li>Project can be further inetragted with any tools like OWASP, RestAssured.</li>
+  <li>Project can be further inetragted with any tools like OWASP.</li>
 </ol>
 
 # Repository Structure Details
@@ -26,11 +27,14 @@ This is the sample Selenium Java TestNg Maven framework which consist of the sam
   <li><b>src/test/java/Amazon/PageObjects : </b>Reusable methods in specific classes.</li>
   <li><b>src/test/java/Amazon/Pages : </b>Parent object which is used to access the reusable methods.</li>
   <li><b>src/test/java/Amazon/Tests : </b> Actual tests.</li>
-  <li><b>src/test/java/genericLibrary : </b>This folder consists of the non-application specific libraries. For e.g.: Browser launch, Reporting</li>
+  <li><b>src/test/java/genericLibrary : </b>This folder consists of the non-application specific libraries. For e.g.: RestAssured, Browser launch, Reporting</li>
 </ol>
 
 # Automation Report
-<ul><li><b>test-output/AutomationExtentReport.html :</b> Execution report of the assignment. Same test is executed against the chrome and firefox in parallel through testng xml.</li></ul>
+<ul>
+	<li><b>test-output/AutomationExtentReport.html :</b> Execution report of the ui assignment. Same test is executed against the chrome and firefox in parallel through testng xml.</li>
+	<li><b>test-output/AutomationExtentReport-API.html :</b> Execution report of the api assignment.</li>
+</ul>
 
 # How to trigger the execution
 <ul>
